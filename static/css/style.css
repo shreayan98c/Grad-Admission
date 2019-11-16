@@ -1,6 +1,6 @@
 form
 {
-	margin-top: 6%;
+	margin-top: 4%;
 	border: 1px solid;
 	padding: 3%;
 }
@@ -8,4 +8,9 @@ form
 div.container.mainbody
 {
 	padding-top: 3%;
+}
+
+.mainfooter
+{
+	margin-top: 4%!important;
 }
