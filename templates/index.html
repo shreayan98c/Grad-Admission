@@ -1,156 +1,139 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-	<meta charset="utf-8">
-	<title>Graduate School Finder</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<!-- CSS Files -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="static/css/style.css">
+  <meta charset="utf-8">
+  <title>GradSearch - Find the perfect school</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
 
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-	<div class="container">
-
-	<h1>Welcome to Grad School Finder</h1>
-
-  <h3>To find the best university for you!</h3>
-
-	<form id="data_form" method="POST" action="/list_univs">
-  
-  <div class="form-group row">
-    <label for="gre" class="col-sm-2 col-form-label">GRE Score</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="gre" placeholder="Enter score between 260-340">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">GradSearch</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
     </div>
-  </div>
+  </nav>
 
-  <div class="form-group row">
-    <label for="toefl" class="col-sm-2 col-form-label">TOEFL Score</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="toefl" placeholder="Enter score between 0-120">
-    </div>
-  </div>
+  <div class="container mainbody">
 
-<fieldset class="form-group">
-    <div class="row">
-      <legend class="col-form-label col-sm-2 pt-0">Undergraduate University Rating</legend>
-      <div class="col-sm-10">
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-          <label class="form-check-label" for="gridRadios1">
-            1
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-          <label class="form-check-label" for="gridRadios2">
-            2
-          </label>
-        </div>
-        <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
-          <label class="form-check-label" for="gridRadios3">
-            3
-          </label>
-        </div>
-        <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4">
-          <label class="form-check-label" for="gridRadios4">
-            4
-          </label>
-        </div>
-        <div class="form-check disabled">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="option5">
-          <label class="form-check-label" for="gridRadios5">
-            5
-          </label>
+    <h1>Welcome to GradSearch!</h1>
+
+    <h4>Find the perfect grad school for yourself.</h4>
+
+    <form id="data_form" method="POST" action="/list_univs">
+
+      <div class="form-group row">
+        <label for="gre" class="col-sm-2 col-form-label">GRE Score</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="gre" placeholder="Enter score between 260-340">
         </div>
       </div>
-    </div>
-  </fieldset>
 
-  <div class="form-group row">
-    <label for="sop" class="col-sm-2 col-form-label">SOP Strength</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="sop" placeholder="Enter SOP strength on a scale of 0-5">
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <label for="lor" class="col-sm-2 col-form-label">LOR Strength</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="lor" placeholder="Enter LOR strength on a scale of 0-5">
-    </div>
-  </div>
-
-
-<div class="form-group row">
-    <label for="cgpa" class="col-sm-2 col-form-label">CGPA</label>
-    <div class="col-sm-10">
-      <input type="text" class="form-control" id="CGPA" placeholder="Enter CGPA of your undergrad program">
-    </div>
-  </div>
-
-
-  <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-    <div class="col-sm-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-    </div>
-  </div>
-
-  <div class="form-group row">
-    <div class="col-sm-2">Research</div>
-    <div class="col-sm-10">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="research">
-        <label class="form-check-label" for="research">
-          I have published research paper(s) or have completed research internship(s).
-        </label>
+      <div class="form-group row">
+        <label for="toefl" class="col-sm-2 col-form-label">TOEFL Score</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="toefl" placeholder="Enter score between 0-120">
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </div>
-</form>
 
-	</div>
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">Undergraduate University Rating</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+              <label class="form-check-label" for="gridRadios1">
+                1
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+              <label class="form-check-label" for="gridRadios2">
+                2
+              </label>
+            </div>
+            <div class="form-check disabled">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+              <label class="form-check-label" for="gridRadios3">
+                3
+              </label>
+            </div>
+            <div class="form-check disabled">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4" value="option4">
+              <label class="form-check-label" for="gridRadios4">
+                4
+              </label>
+            </div>
+            <div class="form-check disabled">
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios5" value="option5">
+              <label class="form-check-label" for="gridRadios5">
+                5
+              </label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
 
-<!-- JavaScript Files -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <!-- <script src="static/js/main.js"></script> -->
+      <div class="form-group row">
+        <label for="sop" class="col-sm-2 col-form-label">SOP Strength</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="sop" placeholder="Enter SOP strength on a scale of 0-5">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="lor" class="col-sm-2 col-form-label">LOR Strength</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="lor" placeholder="Enter LOR strength on a scale of 0-5">
+        </div>
+      </div>
+
+
+      <div class="form-group row">
+        <label for="cgpa" class="col-sm-2 col-form-label">CGPA</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="CGPA" placeholder="Enter CGPA of your undergrad program (on a scale of 10)">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-2">Research</div>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="research">
+            <label class="form-check-label" for="research">
+              I have published research paper(s) or have completed research internship(s).
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button type="submit" class="btn btn-primary" onclick="validate();">Submit</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="static/js/main.js"></script>
 </body>
 </html>
