@@ -7,5 +7,10 @@ function validate() {
 		return false;
 	}
 
+	var toefl = document.getElementById('toefl').value;
+	if(toefl<0 || toefl>120)
+	{
+		return false;
+	}
 	return true;
 }
