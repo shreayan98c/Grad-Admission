@@ -12,4 +12,4 @@ After the regression model will give its output score between 0-1, the universit
 
 **Languages Used:** Python
 
-**To-Do:** Deploy it on the cloud so that the application can be accessed via the internet.
+**Link to the Deployed Project:** https://grad-search.herokuapp.com/
