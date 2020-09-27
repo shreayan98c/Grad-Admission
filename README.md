@@ -12,4 +12,4 @@ After the regression model will give its output score between 0-1, the universit
 
 **Languages Used:** Python
 
-**To-Do:** Make the front end UI and deploy it so that the model can be run on the values that were submitted using the form.
+**To-Do:** Deploy it on the cloud so that the application can be accessed via the internet.
