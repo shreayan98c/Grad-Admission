@@ -1,14 +1,35 @@
 {% extends 'base.html' %} {% block title %}
 <title>GradSearch - Universities List</title>
-{% endblock %}
+{% endblock %} {% block body %}
 
-{% block body %}
-
-<h3>  We found your profile to be in the {{ '%0.2f' % (prediction*100) }} percentile of all of the graduate students. </h3> <br>
-
-<h3> We recommended the following universities according to your profile! <br>
-	{{ univ_list[0] }} <br>
-	{{ univ_list[2] }} <br>
-	{{ univ_list[1] }} <br>
+<h3>
+  We found your profile to be in the {{ '%0.2f' % (prediction*100) }} percentile
+  of all of the graduate students!
 </h3>
+<br />
+
+<h3>We recommended the following universities according to your profile.</h3>
+<br />
+
+<h4>Ambitious Universities:</h4>
+<ul>
+  <li>{{ univ_list[0] }}</li>
+  <li>{{ univ_list[1] }}</li>
+  <li>{{ univ_list[2] }}</li>
+</ul>
+
+<h4>Moderate Universities:</h4>
+<ul>
+  <li>{{ univ_list[3] }}</li>
+  <li>{{ univ_list[4] }}</li>
+  <li>{{ univ_list[5] }}</li>
+</ul>
+
+<h4>Safe Universities:</h4>
+<ul>
+  <li>{{ univ_list[6] }}</li>
+  <li>{{ univ_list[7] }}</li>
+  <li>{{ univ_list[8] }}</li>
+  <li>{{ univ_list[9] }}</li>
+</ul>
 {% endblock %}
