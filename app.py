@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request, url_for
-from sklearn.externals import joblib
 import pickle
 import numpy as np
 import pandas as pd
 
 app = Flask(__name__)
-model = joblib.load('model.pkl')
+with open('model.pickle', 'rb') as file:
+    model = pickle.load(file)
 
 @app.route('/')
 def index():
