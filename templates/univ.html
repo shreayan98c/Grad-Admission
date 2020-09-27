@@ -1,9 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Universities List</title>
-  </head>
-  <body>
-    The best universities are:
-  </body>
-</html>
+{% extends 'base.html' %} {% block title %}
+<title>GradSearch - Universities List</title>
+{% endblock %}
+
+{% block body %}
+
+<h3>  We found your profile to be in the {{ '%0.2f' % (prediction*100) }} percentile of all of the graduate students. </h3> <br>
+
+<h3> We recommended the following universities according to your profile! <br>
+	{{ univ_list[0] }} <br>
+	{{ univ_list[2] }} <br>
+	{{ univ_list[1] }} <br>
+</h3>
+{% endblock %}

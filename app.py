@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request
 from sklearn.externals import joblib
 import pickle
+import numpy as np
+import pandas as pd
 
 app = Flask(__name__)
 model = joblib.load('model.pkl')
@@ -23,8 +25,16 @@ def universities():
 			research=0
 		else:
 			research=1
-		
-		# return render_template('univ.html', result=result)
+		model_input = pd.DataFrame([[gre, toefl, rating, sop, lor, cgpa, research]], columns = ['GRE Score', 'TOEFL Score', 'University Rating', 'SOP', 'LOR', 'CGPA', 'Research'])
+		prediction = model.predict(model_input)[0]
+
+		if(prediction>0.9):
+			univ_list = ['Harvard', 'Stanford', 'Gatech']
+			
+		else:
+			univ_list = ['UCLA', 'UCSD', 'Columbia']
+
+		return render_template('univ.html', univ_list=univ_list, prediction=prediction)
 
 # @app.route('/results')
 
